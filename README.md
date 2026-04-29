@@ -1,4 +1,4 @@
-# n8n Tighten
+# n8n-tighten
 
 A [Claude Skill](https://code.claude.com/docs/en/skills) and [Claude Code plugin](https://code.claude.com/docs/en/plugins) that tightens loose [n8n](https://n8n.io) workflows, and helps you build new ones that ship tight from day one.
 
