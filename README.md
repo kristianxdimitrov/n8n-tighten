@@ -128,9 +128,27 @@ Once installed, the skill triggers automatically when you ask Claude about n8n. 
 - *"My Split In Batches loop runs forever, what's wrong?"*
 - *"How do I verify the Stripe signature on a webhook in n8n?"*
 
-### Run the linter on exported workflows
+### Slash commands
 
-For workflows tracked in version control, the bundled Python linter checks JSON files statically, no Claude required:
+For deterministic invocation when you don't want to rely on Claude's auto-triggering, three slash commands ship with the plugin:
+
+| Command | What it does |
+|---------|--------------|
+| `/n8n-tighten:audit [workflow-id-or-json]` | Run a severity-ranked production-readiness audit on the workflow you pass in (workflow ID via MCP, or JSON pasted after the command) |
+| `/n8n-tighten:build [description]` | Build a new production-grade workflow from a description, with error handling and credential hygiene baked in |
+| `/n8n-tighten:lint [path/to/workflow.json]` | Run the bundled Python linter on an exported workflow JSON file |
+
+Examples:
+
+```
+/n8n-tighten:audit abc123XyzWorkflowId
+/n8n-tighten:build webhook receives Stripe events, verify signature, post to Slack
+/n8n-tighten:lint ./workflows/daily-report.json
+```
+
+### Run the linter directly (no Claude needed)
+
+For workflows tracked in version control, the bundled Python linter checks JSON files statically. No Claude or n8n required, just Python:
 
 ```bash
 python plugins/n8n-tighten/scripts/lint_workflow_json.py path/to/workflow.json
@@ -148,6 +166,10 @@ n8n-tighten/                              ← repo root
 │   └── n8n-tighten/                      ← the plugin
 │       ├── .claude-plugin/
 │       │   └── plugin.json                    ← plugin manifest
+│       ├── commands/                          ← slash commands
+│       │   ├── audit.md                       ← /n8n-tighten:audit
+│       │   ├── build.md                       ← /n8n-tighten:build
+│       │   └── lint.md                        ← /n8n-tighten:lint
 │       ├── scripts/
 │       │   └── lint_workflow_json.py          ← static linter (CI-friendly)
 │       └── skills/
