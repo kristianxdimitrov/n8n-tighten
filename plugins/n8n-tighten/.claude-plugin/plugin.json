@@ -1,0 +1,12 @@
+{
+  "name": "n8n-tighten",
+  "description": "Tighten loose n8n workflows before they fail in production. Catches silent failures, bad credential hygiene, fragile retry logic, and architecture anti-patterns. Works in tighten mode (review existing workflows for loose ends) and build mode (generate new ones from a description), with reference docs covering error handling, loops, AI/LLM nodes, expressions, webhooks/schedules, and credentials.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kristian Dimitrov"
+  },
+  "homepage": "https://github.com/kristianxdimitrov/n8n-tighten",
+  "repository": "https://github.com/kristianxdimitrov/n8n-tighten",
+  "license": "MIT",
+  "keywords": ["n8n", "automation", "workflow", "audit", "skill", "mcp"]
+}

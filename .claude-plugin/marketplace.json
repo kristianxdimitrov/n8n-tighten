@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "n8n-tighten",
+  "description": "Marketplace for n8n Tighten, tighten loose n8n workflows before they fail in production.",
+  "owner": {
+    "name": "Kristian Dimitrov"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "n8n-tighten",
+      "source": "./plugins/n8n-tighten",
+      "description": "Audit and build production-grade n8n workflows.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Kristian Dimitrov"
+      },
+      "license": "MIT",
+      "category": "automation",
+      "keywords": ["n8n", "automation", "workflow", "audit", "mcp"],
+      "tags": ["n8n", "workflow", "automation", "devops", "ai-agents", "mcp"]
+    }
+  ]
+}
