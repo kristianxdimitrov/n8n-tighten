@@ -18,7 +18,7 @@ $RECYCLE.BIN/
 .directory
 .Trash-*
 
-# Python
+# Python (linter generates these when run)
 __pycache__/
 *.py[cod]
 *$py.class
@@ -34,11 +34,12 @@ env/
 .idea/
 *.swp
 *.swo
+*~
 .project
 .classpath
 .settings/
 
-# Environment files
+# Environment files (never commit secrets)
 .env
 .env.local
 .env.*.local
@@ -46,11 +47,11 @@ env/
 # Logs
 *.log
 
-# Node
+# Node (just in case)
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# OS
+# OS-generated thumbnails
 *.thumb
