@@ -31,7 +31,7 @@ In Claude Code, add this repo as a marketplace, then install the plugin:
 /plugin install n8n-tighten@n8n-tighten
 ```
 
-That's it. The skill loads automatically when you ask Claude about n8n. Update later with:
+The skill loads automatically when you ask Claude about n8n. Update later with:
 
 ```
 /plugin marketplace update n8n-tighten
